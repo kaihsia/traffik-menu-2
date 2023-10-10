@@ -4,13 +4,14 @@ import Hamburger from './Icons/Hamburger';
 import './Navbar.css';
 import Cart from './Icons/Cart';
 
-const categories = ["Food & Drink", "Essentials", "Apperal", "Home", "Garden", "Baby", "Pets", "Accessories", "etc"];
+const categories = ["Food & Drink", "Essentials", "Apperal", "Home", "Sports & Outdoors", "Beauty", "Baby & Kids", "Pets"];
 
 function NavBar({toggleMenu}) {
+  // const [ selectedCategory, setSelectedCategory ] = this.useState('');
   return (
     <div className="border-bottom">
-      <div className="p-4 md:pt-[20px] md:px-[40px] pb-[10px] mx-auto bg-white md:w-1360">
-        <div className="flex flex-col justify-between gap-5 md:space-x-8 md:pb-[16px] md:flex-row">
+      <div className="p-4 md:pt-[20px] md:px-[40px] pb-[0] mx-auto bg-white md:w-1360">
+        <div className="flex flex-col justify-between gap-4 md:space-x-8 md:pb-[16px] md:flex-row">
           <div className="self-start mr-4 md:self-center md:mb-0 md:mr-4">
             <Logo />
           </div>
@@ -40,7 +41,7 @@ function NavBar({toggleMenu}) {
 
 
         
-        <div className="flex items-center">
+        <div className="flex items-center pt-[4px]">
             <div className="flex-shrink-0 md:space-y-3" onClick={toggleMenu}>
                 <a href="www.google.com" className="text-gray-600 hover:text-gray-900 all-item mr-4 bg-[#F2F2F2] px-3 py-[5px] rounded-md flex items-center medium-text">
                     <span>
@@ -56,8 +57,8 @@ function NavBar({toggleMenu}) {
                 <nav className="flex md:gap-x-[18px] whitespace-nowrap">
                     {
                       categories.map(category => (
-                        <div className="p-[10px]">
-                          <a href="www.google.com" key={category} className={`text-gray-600 hover:text-gray-900 medium medium-bold}`}>{category}</a> 
+                        <div className="px-[10px] md:p-[10px] medium medium-bold">
+                          <a href="www.google.com" key={category}>{category}</a> 
                         </div>
                       ))
                     }

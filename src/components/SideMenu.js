@@ -1,6 +1,5 @@
 import React from 'react'
 import LeftArrow from './Icons/LeftArrow';
-import RightArrow from './Icons/RightArrow';
 
 const categories = ['Food & Drink', 'Essentials', 'Apparel', 'Home', 'Sports & Outdoors', 'Baby & Kids', 'Pets', 'Health & Wellness', 'Personal care', 'Beauty', 'Books', 'Toys & Games', 'Electronics', 'Automotive', 'Luggage', 'Seasonal', 'Deals', 'Gifts', 'Gift cards', 'Services & Local'];
 

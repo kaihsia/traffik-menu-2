@@ -1,23 +1,47 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import NavBar from './components/NavBar';
+import NavBottom from './components/NavBottom';
+import SubMenu from './components/SubMenu';
+import SideMenu from './components/SideMenu';
 import './App.css';
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [subMenuOpen, setSubMenuOpen] = useState(false);
+
+  const openSubMenu = (e) => {
+    e.preventDefault();
+    setSubMenuOpen(true);
+  };
+
+  const closeSubMenu = () => {
+    setSubMenuOpen(false);
+  };
+
+  const toggleMenu = (e) => {
+    e.preventDefault();
+    setMenuOpen(!menuOpen)
+    closeSubMenu(false);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`App`}>
+      <NavBar toggleMenu={toggleMenu} />
+      <SideMenu
+        menuOpen={menuOpen}
+        toggleMenu={toggleMenu}
+        openSubMenu={openSubMenu}
+      />
+      <SubMenu
+        subMenuOpen={subMenuOpen}
+        closeSubMenu={closeSubMenu}
+      />
+      <NavBottom />
+      {
+        menuOpen && (
+          <div className='overlay'></div>
+        )
+      }
     </div>
   );
 }

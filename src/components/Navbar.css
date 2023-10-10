@@ -1,0 +1,21 @@
+.no-scrollbar::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.all-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.search-background {
+    border-radius: 106px;
+    background: var(--text-colors-10, #F2F2F2);
+}
+
+/* @media screen and (min-width: 390px) {
+    .sub-menu-transform {
+        transform: translateX(calc(-100% + 380px));
+    }
+} */

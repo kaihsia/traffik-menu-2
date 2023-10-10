@@ -1,13 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* font-family: 'Tiempos Fine Light', 'Tiempos Fine Medium Italic', 'Tiempos Headline Regular', 'Tiempos Headline Regular', 'Matter'; */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  /* font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace; */
+}
+
+.small-text {
+  color: var(--text-colors-500, #3E4147);
+  /* Body/Body 12/Body 12 Bold */
+  /* font-family: Plus Jakarta Sans; */
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.medium-bold {
+  color: var(--text-colors-500, #3E4147);
+  /* Body/Body - Base - 16/Body 16 Bold */
+  /* font-family: Plus Jakarta Sans; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 24px */
+}
+
+@media (max-width: 400px) {
+  .medium {
+    color: var(--text-colors-500, #3E4147);
+    /* Body/Body 12/Body 12 Bold */
+    /* font-family: Plus Jakarta Sans; */
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+
+.medium-text {
+  color: var(--text-colors-500, #3E4147);
+  /* Body/Body - Base - 16/Body 16 Bold */
+  /* font-family: Plus Jakarta Sans; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 24px */
+}
+
+.faded-text {
+  overflow: hidden;
+  color: var(--text-colors-400, #747578);
+  text-overflow: ellipsis;
+  /* Body/Body 14/Body 14 Regular */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+}
+
+.shop-all {
+  color: var(--main-brand-color-primary-flagship-purple-500, #2D2C70);
+  text-align: center;
+  /* Body/Body 14/Body 14 Bold */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 21px */
+}
+
+.food-drink {
+  color: var(--text-colors-500, #3E4147);
+  /* Heading/H6 */
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+
+/* Uncomment this when code is integrated into main repo*/
+/* @font-face {
+  font-family: 'Tiempos Fine Light';
+  font-weight: 300;
+  src: local('Tiempos Fine Light'), url("/fonts/Tiempos-Fine-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Tiempos Fine Medium Italic';
+  font-weight: 300;
+  src: local('Tiempos Fine Medium Italic'), url("/fonts/Tiempos-Fine-Medium-Italic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Tiempos Headline Regular';
+  font-weight: 600;
+  src: local('Tiempos Headline Regular'), url("/fonts/TiemposHeadline-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Matter';
+  src: local('Matter'), url("/fonts/Matter-Medium.otf") format("opentype");
+} */
+
+.overlay {
+  position:absolute;
+  height: 2000px;
+  width: 1500px;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  backdrop-filter: blur(10px);
+}
+
+@media only screen and (min-width: 1024px) {
+  .overlay {
+    width:5000px;
+  }
+}
+
+
+@media only screen and (max-width: 400px) {
+  .logo-size {
+    width: 143px;
+    height: 24px;
+  }
+}
+
+.logo-size {
+  width: 203px;
+  height: 34px;
 }
